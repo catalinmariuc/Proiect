@@ -10,6 +10,10 @@ namespace Proiect
     {
         static void Main(string[] args)
         {
+            Carte carte_test;
+            Persoana pers_test;
+            //Console.WriteLine(carte_test);
+            Console.ReadKey();
         }
     }
 }
