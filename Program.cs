@@ -12,7 +12,7 @@ namespace Proiect
         {
             Carte carte_test;
             Persoana pers_test;
-            //Console.WriteLine(carte_test);
+            //Console.WriteLine(carte_test); - inca nu pot face asta, urmeaza
             Console.ReadKey();
         }
     }
