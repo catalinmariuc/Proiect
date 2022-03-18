@@ -14,31 +14,31 @@ namespace Proiect
         //Constructor implicit:
         public Carte()
         {
-            nume = "Nume nedefinit";
-            autor = "Autor nedefinit";
-            editura = "Editura nedefinita";
+            nume = "NUME_NEDEFINIT";
+            autor = "AUTOR_NEDEFINIT";
+            editura = "EDITURA_NEDEFINITA";
             pret = 0;
             an_aparitie = DateTime.Now.Year;
         }
 
         //Constructor cu parametrii:
-         public Carte(String nume_param, String autor_param, String editura_param, Int32 pret_param, Int32 an_param)
+         public Carte(String numeParam, String autorParam, String edituraParam, Int32 pretParam, Int32 anParam)
         {
-            nume = nume_param;
-            autor = autor_param;
-            editura = editura_param;
-            pret = pret_param;
-            an_aparitie = an_param;
+            nume = numeParam;
+            autor = autorParam;
+            editura = edituraParam;
+            pret = pretParam;
+            an_aparitie = anParam;
         }
 
         //Constructor de copiere(nu ar trebui sa fie folosit ):
-        public Carte(Carte carte_param)
+        public Carte(Carte other)
         {
-            nume = carte_param.nume;
-            autor = carte_param.autor;
-            editura = carte_param.editura;
-            pret = carte_param.pret;
-            an_aparitie = carte_param.an_aparitie;
+            nume = other.nume;
+            autor = other.autor;
+            editura = other.editura;
+            pret = other.pret;
+            an_aparitie = other.an_aparitie;
         }
     }
 }
