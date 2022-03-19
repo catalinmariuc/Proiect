@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proiect", "Proiect.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meniu", "..\Meniu\Meniu.csproj", "{550DC436-914A-4422-B301-ECBC7A2AB70B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocareDateFisier", "..\StocareDateFisier\StocareDateFisier.csproj", "{1710E8D3-8BCA-4B11-8E03-42DD251EF37F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{550DC436-914A-4422-B301-ECBC7A2AB70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550DC436-914A-4422-B301-ECBC7A2AB70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550DC436-914A-4422-B301-ECBC7A2AB70B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1710E8D3-8BCA-4B11-8E03-42DD251EF37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1710E8D3-8BCA-4B11-8E03-42DD251EF37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1710E8D3-8BCA-4B11-8E03-42DD251EF37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1710E8D3-8BCA-4B11-8E03-42DD251EF37F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

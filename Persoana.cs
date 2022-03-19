@@ -10,6 +10,7 @@ namespace Proiect
     {
         private String nume, prenume, email, nrTel;
         private DateTime dob; //Date of birth
+        private Int32 id;
 
         public Persoana()
         {
@@ -30,6 +31,16 @@ namespace Proiect
 
         }
 
+        public Persoana(String liniefisier)
+        {
+            String[] temp = liniefisier.Split(',');
+            nume = temp[0];
+            prenume = temp[1];
+            email = temp[2];
+            nrTel = temp[3];
+            int[] tempDATA = Array.ConvertAll(temp[4].Trim().Split('/'), s => int.Parse(s));
+            dob = new DateTime(tempDATA[2], tempDATA[1], tempDATA[0]);
+        }
         public Persoana(Persoana other)
         {
             nume = other.nume;
@@ -41,7 +52,7 @@ namespace Proiect
 
         public String MyToString()
         {
-            return nume + ' ' + prenume + ' ' + email + ' ' + nrTel + ' ' + (dob.ToString().Split())[0];
+            return $"{nume},{prenume},{email},{nrTel},{(dob.ToString().Split())[0]}";
         }
     }
 }
