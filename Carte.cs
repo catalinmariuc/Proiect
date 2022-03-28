@@ -54,5 +54,53 @@ namespace Proiect
         {
             return $"{nume},{autor},{editura},{pret},{an_aparitie}";
         }
+
+        static public Carte citireCarteTastatura()
+        {
+            Console.Write("Nume = ");
+            String tempNume = Console.ReadLine().Trim();
+            Console.Write("Autor = ");
+            String tempAutor = Console.ReadLine().Trim();
+            Console.Write("Editura = ");
+            String tempEditura = Console.ReadLine().Trim();
+            Console.Write("Pret = ");
+            int tempPret = Int32.Parse(Console.ReadLine().Trim());
+            Console.Write("An aparitie = ");
+            int tempAnAparitie = Int32.Parse(Console.ReadLine().Trim());
+            Carte cTemp = new Carte(tempNume, tempAutor, tempEditura, tempPret, tempAnAparitie);
+            return cTemp;
+        }
+        static public void afisareCartiFisier(StocareDateFisier.StocareDateFisierCarti stocareCarti, out Int32 nrCarti)
+        {
+            Carte[] carti = stocareCarti.GetCarti(out nrCarti);
+            for (Int32 i = 0; i < nrCarti; i++)
+                Console.WriteLine(carti[i].MyToString());
+            Console.WriteLine("Apasati o tasta pentru a continua...");
+            Console.ReadKey();
+        }
+        static public Carte gasireCarte(Carte[] carti, Int32 nrCarti, String[] numeSiAutorTemp)
+        {
+            bool gasit = false;
+            for (Int32 i = 0; i < nrCarti; i++)
+            {
+                String[] carteCurenta = carti[i].MyToString().Split(',');
+                if (carteCurenta[0] == numeSiAutorTemp[0] && carteCurenta[1] == numeSiAutorTemp[1])
+                {
+                    Console.WriteLine($"Carte Gasita!\n{carti[i].MyToString()}");
+                    i = nrCarti + 3;
+                    gasit = true;
+                    Console.WriteLine("Apasati o tasta pentru a continua...");
+                    Console.ReadKey();
+                    return carti[i];
+                }
+            }
+            if (!gasit)
+            {
+                Console.WriteLine("Cartea nu a fost gasita!");
+            }
+            Console.WriteLine("Apasati o tasta pentru a continua...");
+            Console.ReadKey();
+            return null;
+        }
     }
 }

@@ -66,7 +66,7 @@ namespace StocareDateFisier
                 streamWriterFisierText.WriteLine(carte.MyToString());
             }
         }
-        public Carte[] GetPersoane(out int nrCarti)
+        public Carte[] GetCarti(out int nrCarti)
         {
             Carte[] carti = new Carte[NR_MAX_CARTI];
             using (StreamReader streamReader = new StreamReader(numeFisier))
