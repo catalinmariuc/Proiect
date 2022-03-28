@@ -11,8 +11,12 @@ namespace Proiect
             //DECLARATII DATE
             Persoana persoanaTastatura = null;
             //StocareDateFisier.StocareDateFisierCarti adminCarti = new StocareDateFisier.StocareDateFisierCarti(ConfigurationManager.AppSettings.Get("numeFisierCarti"));
-            
-            StocareDateFisier.StocareDateFisierPersoane adminPersoane = new StocareDateFisier.StocareDateFisierPersoane(ConfigurationManager.AppSettings.Get("numeFisierPersoane"));
+            StocareDateFisier.StocareDateFisierPersoane adminPersoane;
+            //LAB 4(EX1)
+            if (args.Length != 0)
+                adminPersoane = new StocareDateFisier.StocareDateFisierPersoane(args[1]);
+            else
+                adminPersoane = new StocareDateFisier.StocareDateFisierPersoane(ConfigurationManager.AppSettings.Get("numeFisierPersoane"));
             Int32 nrPersoane = 0;
 
             //CONFIG
