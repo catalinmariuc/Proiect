@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AplicatiaConsola.cs" />
     <Compile Include="Carte.cs" />
     <Compile Include="ListaPersoana.cs" />
     <Compile Include="Persoana.cs" />
