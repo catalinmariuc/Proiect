@@ -9,17 +9,24 @@ namespace Proiect
         static void Main(string[] args)
         {
             //DECLARATII DATE
+            string[][] genuriCarti = new string[][] { new string[] { "Filozofie", "Stoicism", "Existentialism", "Nihilism" }, 
+                new string[] { "Psihologie", "Manual", "Dezvoltare Personala" },
+                new string[] { "Istorie", "Nazism", "Comunism", "Fascism", "Evul mediu", "Epoca de piatra", "Paleolitic", "Neolitic","Jurasic"} };
+
             Persoana persoanaTastatura = null;
             Carte carteTastatura = null;
             StocareDateFisier.StocareDateFisierCarti adminCarti = new StocareDateFisier.StocareDateFisierCarti(ConfigurationManager.AppSettings.Get("numeFisierCarti"));
             StocareDateFisier.StocareDateFisierPersoane adminPersoane;
+            Int32 nrPersoane = 0;
+            Int32 nrCarti = 0;
+
             //LAB 4(EX1)
             if (args.Length != 0)
                 adminPersoane = new StocareDateFisier.StocareDateFisierPersoane(args[1]);
             else
                 adminPersoane = new StocareDateFisier.StocareDateFisierPersoane(ConfigurationManager.AppSettings.Get("numeFisierPersoane"));
-            Int32 nrPersoane = 0;
-            Int32 nrCarti = 0;
+
+            
 
             //CONFIG
             Console.ForegroundColor = ConsoleColor.Black;
@@ -122,7 +129,8 @@ namespace Proiect
                         break;
                     default:
                         //IN CAZ DE ORICE
-                        Console.WriteLine("Nu exista optiunea aleasa!");
+                        Console.WriteLine("Nu exista optiunea aleasa! Apasati o tasta...");
+                        Console.ReadKey();
                         break;
                 }
             }
