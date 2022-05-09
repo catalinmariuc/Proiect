@@ -8,8 +8,11 @@ namespace Proiect
 {
     public class Persoana
     {
-        private String nume, prenume, email, nrTel;
-        private DateTime dob; //Date of birth
+        public String nume { get; set; }
+        public String prenume { get; set; }
+        public String email { get; set; }
+        public String nrTel { get; set; }
+        public DateTime dob { get; set; } //Date of birth
         //private Int32 id;
 
         public Persoana()
@@ -88,10 +91,9 @@ namespace Proiect
                 if (persCurenta[0] == numeSiPrenumeTemp[0] && persCurenta[1] == numeSiPrenumeTemp[1])
                 {
                     Console.WriteLine($"Persoana Gasita!\n{persoane[i].MyToString()}");
-                    i = nrPersoane + 3;
                     gasit = true;
                     Console.WriteLine("Apasati o tasta pentru a continua...");
-                    Console.ReadKey();
+                    //Console.ReadKey();
                     return persoane[i];
                 }
             }
@@ -100,7 +102,7 @@ namespace Proiect
                 Console.WriteLine("Persoana nu a fost gasita!");
             }
             Console.WriteLine("Apasati o tasta pentru a continua...");
-            Console.ReadKey();
+            //Console.ReadKey();
             return null;
         }
     }

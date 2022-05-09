@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proiect", "Proiect.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meniu", "..\Meniu\Meniu.csproj", "{550DC436-914A-4422-B301-ECBC7A2AB70B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfataUtilizator", "..\InterfataUtilizator\InterfataUtilizator.csproj", "{947BC8DE-13BF-476E-9F05-38CA08D20B5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{550DC436-914A-4422-B301-ECBC7A2AB70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550DC436-914A-4422-B301-ECBC7A2AB70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550DC436-914A-4422-B301-ECBC7A2AB70B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947BC8DE-13BF-476E-9F05-38CA08D20B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947BC8DE-13BF-476E-9F05-38CA08D20B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947BC8DE-13BF-476E-9F05-38CA08D20B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947BC8DE-13BF-476E-9F05-38CA08D20B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

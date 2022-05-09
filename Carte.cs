@@ -8,8 +8,21 @@ namespace Proiect
 {
     public class Carte
     {
-        private String nume, autor, editura;
-        private Int32 pret, an_aparitie;
+        public String nume { get; set; }
+        public String autor { get; set; }
+        public String editura { get; set; }
+        public Int32 pret { get; set; }
+        public Int32 an_aparitie { get; set; }
+        public enum coperta
+        {
+            paperback = 1,
+            hardcover = 2
+        };
+        public enum dimensiune
+        {
+            A4=1,
+            A5=2
+        };
 
         //Constructor implicit:
         public Carte()
@@ -83,14 +96,14 @@ namespace Proiect
             bool gasit = false;
             for (Int32 i = 0; i < nrCarti; i++)
             {
-                String[] carteCurenta = carti[i].MyToString().Split(',');
+                String[] carteCurenta = carti[i].MyToString().Trim().Split(',');
                 if (carteCurenta[0] == numeSiAutorTemp[0] && carteCurenta[1] == numeSiAutorTemp[1])
                 {
                     Console.WriteLine($"Carte Gasita!\n{carti[i].MyToString()}");
-                    i = nrCarti + 3;
+                    
                     gasit = true;
                     Console.WriteLine("Apasati o tasta pentru a continua...");
-                    Console.ReadKey();
+                    //Console.ReadKey();
                     return carti[i];
                 }
             }
@@ -99,7 +112,7 @@ namespace Proiect
                 Console.WriteLine("Cartea nu a fost gasita!");
             }
             Console.WriteLine("Apasati o tasta pentru a continua...");
-            Console.ReadKey();
+            //Console.ReadKey();
             return null;
         }
     }
